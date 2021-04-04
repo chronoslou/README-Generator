@@ -48,10 +48,9 @@ const questions = [
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
             //list of license
-            type: 'list',
+            type: 'input',
             message:"What license did you use?",
-            name: 'license',
-            choices: ['The MIT license', 'The GPL license', 'Apache license', 'GNU license', 'N/A'],
+            name: "license",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         {
