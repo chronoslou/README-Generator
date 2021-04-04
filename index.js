@@ -47,12 +47,13 @@ const questions = [
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
-            //list of license
-            type: 'input',
+        {
+            type: "input",
             message:"What license did you use?",
             name: "license",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
+        }
         {
             type: "input",
             message: "Please add contributors",
