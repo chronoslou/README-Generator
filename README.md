@@ -36,7 +36,7 @@ You will need to install the inquirer package in order to run the app effectivel
 
 * This is how the app looks
 
-![Screenshot](Assets/appimages/updated portfolio.jpeg)
+![Screenshot](APPIMAGE.jpg)
 
 # Lincense
 * MIT
