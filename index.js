@@ -6,78 +6,69 @@ const fs = require('fs');
 //inquirer to generate questions
 const questions = [
         {
-            type: 'input',
-            message:"What's the project title?",
-            name:'title',
+            type: "input",
+            message: "What is your GitHub username?",
+            name: "UserName",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
-            type: 'input',
-            message:"Describe your project?",
-            name:'description',
+            type: "input",
+            message: "What is your email address?",
+            name: "Email",
+            //validate property to check that the user provided a value
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
+        },        
+        {
+            type: "input",
+            message: "What is the title for your project?",
+            name: "Title",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
-            type: 'input',
-            message:"How do you install your app?",
-            name:'installation',
+            type: "input",
+            message: "Please give description of your project.",
+            name: "Description",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
-            type: 'input',
-            message:"Instructions to follow",
-            name:'instructions',
+            type: "input",
+            message: "What necessary dependencies must be installed to run this app?",
+            name: "Installation",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
-            type: 'input',
-            message:"Any Credits?",
-            name:'installation',
+            type: "input",
+            message: "What is this app used for?",
+            name: "Usage",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
-        {
-            type: 'input',
-            message:"How do you use your app?",
-            name:'usage',
-            //validate property to check that the user provided a value
-            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
-        },
-        {
             //list of license
             type: 'list',
             message:"What license did you use?",
-            name:'license',
+            name: 'license',
             choices: ['The MIT license', 'The GPL license', 'Apache license', 'GNU license', 'N/A'],
             //validate property to check that the user provided a value
-            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}}, 
-        },
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         {
-            type: 'input',
-            message:"How do you install your app?",
-            name:'installation',
-            //validate property to check that the user provided a value
-            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}}, 
-        },
-        {
-            type: 'input',
-            message:"GitHub username?",
-            name:'git',
-            //validate property to check that the user provided a value
-            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}}, 
-        },
-        {
-            type: 'input',
-            message:"E-mail:",
-            name:'email',
+            type: "input",
+            message: "Please add contributors",
+            name: "Contributor",
             //validate property to check that the user provided a value
             validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
-    ]; 
+        {
+            type: "input",
+            message: "What command do you use to test this App?",
+            name: "Test",
+            //validate property to check that the user provided a value
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
+        }
+  ];
 
 // Writing to a file 
 function writeToFile(fileName, data) {
@@ -98,8 +89,6 @@ function init() {
         writeToFile("DemoREADME.md", generatorMarkdown(data));
       })
 }
-
-module.exports = generatorMarkdown
 
 // run the app
 init();
